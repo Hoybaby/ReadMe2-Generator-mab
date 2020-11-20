@@ -109,3 +109,8 @@ function generateReadMe(data) {
     `
     return readmeString;
 }
+
+
+promptUser()
+    .then((answers => writeFileAsync('index.html', generateReadMe(data))))
+    .then(() => console.log('Successfully wrote to README.md'));
