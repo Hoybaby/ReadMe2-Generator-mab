@@ -1,5 +1,5 @@
     # README.md Generator
-
+    
     ## Description
       undefined
     ## Table of Contents
@@ -9,6 +9,7 @@
     - [Tests](#tests)
     - [Contributors](#contributors)
     - [Details](#details)
+    
     ## Installation
     Packages required to run this program are: npm inquier
 
