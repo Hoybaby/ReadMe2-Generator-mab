@@ -53,7 +53,7 @@ const promptUser = () =>
         {
             type: "input",
             message: "Please provide a brief description of your project.",
-            name: "Description"
+            name: "description"
         },
         {
             type: "input",
@@ -125,7 +125,7 @@ Examples of how to use this program: (https://github.com/${data.githubName}/${da
 
 
 ## License
-${data.license}
+The license that is being used is ${data.license}
 
 
 ## Tests
