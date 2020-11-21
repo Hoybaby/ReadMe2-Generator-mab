@@ -105,8 +105,10 @@ function generateReadMe(data) {
 
 ## Description
 ${data.description}
+
 ## Table of Contents
-*[Installation](#installation)
+
+* [Installation](#installation)
 
 * [Usage](#usage)
 
@@ -117,8 +119,6 @@ ${data.description}
 * [Contributors](#contributors)
 
 * [Details](#details)
-
-
 
 
 ## Installation
@@ -142,7 +142,7 @@ ${data.contributer}
 
 
 ## Contact
-\n![Badge]${data.gitHubName}
+${data.gitHubName}
 \nIf you have any questions, contact the author directly at ${data.email}.
 `
     return readmeString;
