@@ -30,7 +30,7 @@ const promptUser = () =>
         {
             type:'input',
             message: 'For what repo is this README.md for? Spelling needs to be exact',
-            name:'GitHubRepo'
+            name:'gitHubRepo'
         },
         {
             type: "list",
