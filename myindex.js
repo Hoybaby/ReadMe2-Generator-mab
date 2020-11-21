@@ -9,7 +9,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 
 // using input generate html file in string format
 
-const promptUser = () => {
+const promptUser = () => 
     inquirer.prompt([
         
         {
@@ -39,6 +39,11 @@ const promptUser = () => {
 
         },
         {
+            type: "input",
+            message: "What command do you need to type to run test?",
+            name: "command"
+        },
+        {
             type:"input",
             message: 'What is your Github username?',
             name: 'gitHubName'
@@ -60,25 +65,16 @@ const promptUser = () => {
             message: "What technologies were used?",
             name: "technologies"
         }
-    ]).then(function(data){ 
-        console.log(data)
-        let readMe = generateReadMe(data);
-        // let readmeStr
+    ]);
 
-        writeFileAsync("README.md", readMe).then(
-            err => console.log("Success!")
-        )
 
-    });
-};
+// promptUser();
+//     .then((ansers) => writeFileAsync('index.html', generateHTML(answers)))
+//     .then(() => console.log('Successfully wrote to index.html'))
+//     .catch((er) => console.error(err));
 
-promptUser();
-    // .then((ansers) => writeFileAsync('index.html', generateHTML(answers)))
-    // .then(() => console.log('Successfully wrote to index.html'))
-    // .catch((er) => console.error(err));
-
-function generateReadMe(data) {
-    let readmeString = 
+const generateReadMe = (data) => 
+    // let readmeString = 
     `
     # ${data.title} 
   
@@ -99,18 +95,19 @@ function generateReadMe(data) {
     ## License
     ${data.license}
     ## Tests
-    To test, run the following command: ${data.tests}
+    To test, run the following command: ${data.command}
     ## Contributors
     ${data.contributer}
     ## Contact
-    \n![Badge](${gitHubName}) 
+    \n![Badge]${data.gitHubName}
     \nView the project in GitHub at: ${data.url}
     \nIf you have any questions, contact the author directly at ${data.email}.
     `
-    return readmeString;
-}
+    ;
+
 
 
 promptUser()
-    .then((answers => writeFileAsync('index.html', generateReadMe(data))))
-    .then(() => console.log('Successfully wrote to README.md'));
+    .then((data) => writeFileAsync('README.md', generateReadMe(data)))
+    .then(() => console.log('Successfully wrote to README.md'))
+    .catch((err) => console.error(err))
