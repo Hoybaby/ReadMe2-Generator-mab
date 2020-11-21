@@ -65,7 +65,15 @@ const promptUser = () =>
             message: "What technologies were used?",
             name: "technologies"
         }
-    ]);
+    ]).then (function(data) {
+        console.log(data);
+        let readME = generateReadMe(data);
+
+        writeFileAsync("README.md", readME).then( 
+            err => console.log("Success!")
+        );
+    })
+
 
 
 // promptUser();
@@ -73,54 +81,54 @@ const promptUser = () =>
 //     .then(() => console.log('Successfully wrote to index.html'))
 //     .catch((er) => console.error(err));
 
-const generateReadMe = (data) => 
-    // let readmeString = 
-    `
-    # ${data.title} 
-  
-    ## Description
-      ${data.description}
-    ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Tests](#tests)
-    - [Contributors](#contributors)
-    - [Details](#details)
+function generateReadMe(data) {
+    let readmeString = 
+`#${data.title}
+
+## Description
+${data.description}
+## Table of Contents
+*[Installation](#installation)
+*[Usage](#usage)
+*[License](#license)
+*[Tests](#tests)
+*[Contributors](#contributors)
+*[Details](#details)
 
 
 
 
-    ## Installation
-    Packages required to run this program are: ${data.installation}
+## Installation
+Packages required to run this program are: ${data.installation}
+
+
+## Usage
+Examples of how to use this program: ${data.usage}
+
+
+## License
+${data.license}
+
+
+## Tests
+To test, run the following command: ${data.command}
+
+
+## Contributors
+${data.contributer}
+
+
+## Contact
+\n![Badge]${data.gitHubName}
+\nView the project in GitHub at: ${data.url}
+\nIf you have any questions, contact the author directly at ${data.email}.
+`
+    return readmeString;
     
-
-    ## Usage
-    Examples of how to use this program: ${data.usage}
+};
 
 
-    ## License
-    ${data.license}
-
-
-    ## Tests
-    To test, run the following command: ${data.command}
-
-
-    ## Contributors
-    ${data.contributer}
-
-
-    ## Contact
-    \n![Badge]${data.gitHubName}
-    \nView the project in GitHub at: ${data.url}
-    \nIf you have any questions, contact the author directly at ${data.email}.
-    `
-    ;
-
-
-
-promptUser()
-    .then((data) => writeFileAsync('README.md', generateReadMe(data)))
-    .then(() => console.log('Successfully wrote to README.md'))
-    .catch((err) => console.error(err))
+promptUser();
+    // .then((data) => writeFileAsync('README.md', generateReadMe(data)))
+    // .then(() => console.log('Successfully wrote to README.md'))
+    // .catch((err) => console.error(err))
