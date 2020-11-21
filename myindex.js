@@ -18,6 +18,34 @@ const promptUser = () =>
             name:"name"
         },
         {
+            type:'input',
+            message:'What is your email adress?',
+            name:'email'
+        },
+        {
+            type:"input",
+            message: 'What is your Github username?',
+            name: 'gitHubName'
+        },
+        {
+            type:'input',
+            message: 'For what repo is this README.md for? Spelling needs to be exact',
+            name:'GitHubRepo'
+        },
+        {
+            type: "list",
+            message: 'What is your GitHub license?',
+            choices: [
+                "MIT",
+                "Apache",
+                "GPL v3", 
+                "BSD 3", 
+                "None"
+            ],
+            name:'license'
+        },
+
+        {
             type: "input",
             message: "What is the title of your Project?",
             name:"title"
@@ -32,6 +60,12 @@ const promptUser = () =>
             message: "How can this project be used?",
             name: "usage"
         },
+        {
+            type: 'input',
+            message: 'Who contributed to this project? Please include yourself.',
+            name:'contributer'
+
+        },
         { 
             type: "input",
             message: "What packages are needed to install this project?",
@@ -43,23 +77,7 @@ const promptUser = () =>
             message: "What command do you need to type to run test?",
             name: "command"
         },
-        {
-            type:"input",
-            message: 'What is your Github username?',
-            name: 'gitHubName'
-        },
-        {
-            type: "list",
-            message: 'What is your GitHub license?',
-            choices: [
-                "MIT",
-                "Apache",
-                "GPL v3", 
-                "BSD 3", 
-                "None"
-            ],
-            name:'license'
-        },
+    
         {
             type: "input",
             message: "What technologies were used?",
@@ -103,7 +121,7 @@ Packages required to run this program are: ${data.installation}
 
 
 ## Usage
-Examples of how to use this program: ${data.usage}
+Examples of how to use this program: (https://github.com/${data.githubName}/${data.githubRepo}
 
 
 ## License
@@ -120,7 +138,6 @@ ${data.contributer}
 
 ## Contact
 \n![Badge]${data.gitHubName}
-\nView the project in GitHub at: ${data.url}
 \nIf you have any questions, contact the author directly at ${data.email}.
 `
     return readmeString;

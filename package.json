@@ -1,14 +1,22 @@
 {
-  "name": "28-Stu_Mini-project",
+  "name": "ReadMe2-Generator-mab",
   "version": "1.0.0",
-  "description": "In this activity, you will build a command-line tool that generates an HTML portfolio page from user input.",
-  "main": "index.js",
+  "description": "",
+  "main": "myindex.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hoybaby/ReadMe2-Generator-mab.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hoybaby/ReadMe2-Generator-mab/issues"
+  },
+  "homepage": "https://github.com/Hoybaby/ReadMe2-Generator-mab#readme",
   "dependencies": {
     "inquirer": "^7.3.3"
   }
