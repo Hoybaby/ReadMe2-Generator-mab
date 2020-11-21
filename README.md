@@ -25,6 +25,9 @@ Packages required to run this program are: Npm init -y, and npm inquirer
 ## Usage
 Examples of how to use this program: https://github.com/undefined/undefined
 
+![image](https://user-images.githubusercontent.com/70716786/99889588-a4c8cd00-2c24-11eb-9710-f63d03ea25aa.png)
+
+
 
 ## License
 The license that is being used is MIT. Can be found in the license folder.
