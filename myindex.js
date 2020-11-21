@@ -107,11 +107,16 @@ function generateReadMe(data) {
 ${data.description}
 ## Table of Contents
 *[Installation](#installation)
-*[Usage](#usage)
-*[License](#license)
-*[Tests](#tests)
-*[Contributors](#contributors)
-*[Details](#details)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Tests](#tests)
+
+* [Contributors](#contributors)
+
+* [Details](#details)
 
 
 
@@ -121,11 +126,11 @@ Packages required to run this program are: ${data.installation}
 
 
 ## Usage
-Examples of how to use this program: (https://github.com/${data.githubName}/${data.githubRepo}
+Examples of how to use this program: https://github.com/${data.githubName}/${data.githubRepo}
 
 
 ## License
-The license that is being used is ${data.license}
+The license that is being used is ${data.license}. Can be found in the license folder.
 
 
 ## Tests
