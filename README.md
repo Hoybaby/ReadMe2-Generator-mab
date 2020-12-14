@@ -35,7 +35,15 @@ To test, run the following command: Simple run node myindex.js for this example 
 
 
 ## Contributors
+<<<<<<< HEAD
 Michael Bartek, Michael Fischer, and Mazin Abed
+=======
+Vladimir Dimitrov helped troubleshoot some of the code with me.
+
+
+## Demo of Application
+To see application in works, click on the following link: https://drive.google.com/file/d/1EJFGYdCHSNxkNLvx-CXTAowY_9xsgnC7/preview
+>>>>>>> 5a3ee24c0b48afe31252d32c8765f9b1ec257a18
 
 
 ## Contact
