@@ -118,7 +118,7 @@ ${data.description}
 
 * [Contributors](#contributors)
 
-* [Details](#details)
+* [Contact](#contact)
 
 
 ## Installation
@@ -126,7 +126,7 @@ Packages required to run this program are: ${data.installation}
 
 
 ## Usage
-Examples of how to use this program: https://github.com/${data.githubName}/${data.githubRepo}
+Examples of how to use this program: https://github.com/${data.gitHubName}/${data.gitHubRepo}
 
 
 ## License
